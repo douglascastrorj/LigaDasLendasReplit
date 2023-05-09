@@ -1,9 +1,6 @@
 import './App.css'
+import Home from './pages/Home/Home'
 
 export default function App() {
-  return (
-    <main>
-      Liga das Lendas React ⚛️  Merkurio Maior faker
-    </main>
-  )
+  return <Home />
 }
