@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './Home.css'
 import { getSummonerByName } from '../../context/riotapi.ts';
 import { Button, TextField } from '@material-ui/core';
+//https://v4.mui.com/components/popover/
 
 export default function Home() {
 
@@ -42,6 +43,7 @@ export default function Home() {
         (
           <div>
             <pre>{JSON.stringify(summoner, null, 2) }</pre>
+            <span class="vermelho"> {summoner.name} </span>
           </div>
         ) : null
       }
