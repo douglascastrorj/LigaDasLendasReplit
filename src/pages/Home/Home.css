@@ -35,3 +35,13 @@ input.search {
 .vermelho {
   color: red;
 }
+
+.elo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px; 
+  height: 80px; 
+  border-radius: 50%; 
+  background-color: #282830;
+}
