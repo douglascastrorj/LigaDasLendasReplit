@@ -21,6 +21,7 @@
     "vite": "^3.0.4"
   },
   "dependencies": {
-    "@material-ui/core": "^4.12.4"
+    "@material-ui/core": "*",
+    "@mui/material": "^5.13.0"
   }
 }
