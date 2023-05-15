@@ -2,7 +2,7 @@ const api_summoner_v4 = 'https://br1.api.riotgames.com/lol/summoner/v4';
 const api_league_v4 = 'https://br1.api.riotgames.com/lol/league/v4';
 
 
-const api_key = 'RGAPI-d037c10a-5d55-4ae6-9e6a-4d588a46fea8';
+const api_key = 'RGAPI-14e898f1-3642-44f7-b21c-f86213d0ee7a';
 
 export function getSummonerByName(summoner_name: string) {
   return fetch(`${api_summoner_v4}/summoners/by-name/${summoner_name}?api_key=${api_key}`).then((response) => {

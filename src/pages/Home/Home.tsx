@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import './Home.css'
-import { getSummonerByName, getEntriesBySummoner } from '../../context/riotapi.ts';
+import { getSummonerByName, getEntriesBySummoner } from '../../context/riotapi';
 import { Button, TextField } from '@material-ui/core';
+import { useNavigate } from 'react-router-dom';
 //https://v4.mui.com/components/popover/
 
 export default function Home() {
@@ -9,6 +10,8 @@ export default function Home() {
   const [name, setName] = useState('');
   const [summoner, setSummoner] = useState({});
   const [entries, setEntries] = useState([]);
+
+  let navigate = useNavigate();
 
   useEffect(() => {
     document.title = 'Liga das Lendas React ⚛️';
@@ -37,6 +40,9 @@ export default function Home() {
     event.preventDefault();
   }
 
+  const goToSummonerPage = () => {
+    navigate('/summoner')
+  }
 
   const renderEntry = (entry) => {
     if(!entry) return null;
@@ -74,6 +80,8 @@ export default function Home() {
         {/* <input class="search" type="text" onChange={handleChange} /> */}
         <TextField id="standard-basic" variant="outlined" onChange={handleChange} />
         <Button variant="contained" color="primary" onClick={handleSubmit}> Buscar </Button>
+
+        <Button variant="contained" color="primary" onClick={goToSummonerPage}> Ir para outra pagina </Button>
       </div>
 
       {/* {summoner.id ?

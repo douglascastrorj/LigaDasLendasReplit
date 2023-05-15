@@ -1,6 +1,6 @@
 import './App.css'
-import Home from './pages/Home/Home'
+import { Router } from './router'
 
 export default function App() {
-  return <Home />
+  return <Router />
 }
